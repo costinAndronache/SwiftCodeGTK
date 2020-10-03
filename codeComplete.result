@@ -1,0 +1,72 @@
+{
+  key.request: source.request.configuration.global,
+  key.optimize_for_ide: 1
+}
+{
+  key.request: source.request.codecomplete,
+  key.name: "E:\\swiftCode\\SwiftCodeIDE\\sources\\main.swift",
+  key.compilerargs: [
+    ".\\sources\\main.swift",
+    ".\\sources\\ProjectModel.swift",
+    ".\\sources\\Utils.swift",
+    "-sdk",
+    "C:\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+    "-I",
+    "C:\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk/usr/lib/swift",
+    "-L",
+    "C:\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk/usr/lib/swift/windows",
+    "-I",
+    "E:\\swiftCode\\SwiftCodeIDE/Lib",
+    "-L",
+    "E:\\swiftCode\\SwiftCodeIDE/Lib/",
+    "-IC:/gtk-build/gtk/x64/release/include/gtk-3.0",
+    "-IC:/gtk-build/gtk/x64/release/include/cairo",
+    "-IC:/gtk-build/gtk/x64/release/include",
+    "-IC:/gtk-build/gtk/x64/release/include/pango-1.0",
+    "-IC:/gtk-build/gtk/x64/release/include/fribidi",
+    "-IC:/gtk-build/gtk/x64/release/include",
+    "-IC:/gtk-build/gtk/x64/release/include/freetype2",
+    "-IC:/gtk-build/gtk/x64/release/include/harfbuzz",
+    "-IC:/gtk-build/gtk/x64/release/include/atk-1.0",
+    "-IC:/gtk-build/gtk/x64/release/include/cairo",
+    "-IC:/gtk-build/gtk/x64/release/include/gdk-pixbuf-2.0",
+    "-IC:/gtk-build/gtk/x64/release/include",
+    "-IC:/gtk-build/gtk/x64/release/include/glib-2.0",
+    "-IC:/gtk-build/gtk/x64/release/lib/glib-2.0/include",
+    "-L",
+    "C:\\gtk-build\\gtk\\x64\\release\\lib"
+  ],
+  key.offset: 1051,
+  key.sourcefile: "E:\\swiftCode\\SwiftCodeIDE\\sources\\main.swift",
+  key.codecomplete.options: {
+    key.codecomplete.sort.byname: 1
+  }
+}
+<unknown>:0: error: compiler is in code completion mode (benign diagnostic)
+{
+  key.results: [
+    {
+      key.kind: source.lang.swift.decl.function.free,
+      key.name: "(::::)",
+      key.sourcetext: "(<#T##instance: UnsafeMutableRawPointer!##UnsafeMutableRawPointer!#>, <#T##signal: UnsafeMutablePointer<Int8>!##UnsafeMutablePointer<Int8>!#>, <#T##handler: (() -> Void)!##(() -> Void)!##() -> Void#>, <#T##data: UnsafeMutableRawPointer!##UnsafeMutableRawPointer!#>)",
+      key.description: "(instance: UnsafeMutableRawPointer!, signal: UnsafeMutablePointer<Int8>!, handler: (() -> Void)!, data: UnsafeMutableRawPointer!)",
+      key.typename: "gulong",
+      key.context: source.codecompletion.context.othermodule,
+      key.typerelation: source.codecompletion.typerelation.unknown,
+      key.num_bytes_to_erase: 0,
+      key.associated_usrs: "c:GTKLibSwiftHelpers.h@F@g_signal_connect_swift",
+      key.modulename: "GTKLib"
+    },
+    {
+      key.kind: source.lang.swift.keyword,
+      key.name: "self",
+      key.sourcetext: ".self",
+      key.description: "self",
+      key.typename: "(UnsafeMutableRawPointer?, UnsafeMutablePointer<Int8>?, (@convention(c) () -> Void)?, UnsafeMutableRawPointer?) -> gulong",
+      key.context: source.codecompletion.context.thisclass,
+      key.typerelation: source.codecompletion.typerelation.unknown,
+      key.num_bytes_to_erase: 0
+    }
+  ]
+}
+"FINISHED E:\swiftCode\SwiftCodeIDE\sources\main.swift 29 23" 
