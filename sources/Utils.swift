@@ -16,16 +16,22 @@ func commandLineToCArgs(commandLine: [String]) -> UnsafeMutablePointer<UnsafeMut
    return result
 }
 
-func rebindMutable<T, U>(from: UnsafeMutablePointer<T>) -> UnsafeMutablePointer<U> {
-  return UnsafeMutableRawPointer(from).bindMemory(to: U.self, capacity: MemoryLayout<U>.size)
-}
-
-func rebindMutable<T, U>(from: UnsafeMutablePointer<T>, to: U.Type) -> UnsafeMutablePointer<U> {
-  return UnsafeMutableRawPointer(from).bindMemory(to: to, capacity: MemoryLayout<U>.size)
-}
-
 extension UnsafeMutablePointer {
   func rebound<U>(to: U.Type) -> UnsafeMutablePointer<U> {
-      return UnsafeMutableRawPointer(self).bindMemory(to: to, capacity: MemoryLayout<U>.size)
+    return UnsafeMutableRawPointer(self).bindMemory(to: to, capacity: MemoryLayout<U>.stride)
   }
+  
+  func rebound<U>() -> UnsafeMutablePointer<U> {
+	return UnsafeMutableRawPointer(self).bindMemory(to: U.self, capacity: MemoryLayout<U>.stride)
+  }
+  
+  var opaque: OpaquePointer {
+	return OpaquePointer(self)
+  }
+}
+
+extension Bool {
+	func cast<T: BinaryInteger>() -> T {
+		return self ? T(1) : T(0)
+	}
 }
